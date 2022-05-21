@@ -6,7 +6,7 @@ import com.example.kafkapoc.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/Message")
@@ -20,7 +20,7 @@ public class MessageController {
     }
 
     @GetMapping
-    public List<Message> findMessages(){
+    public Set<String> findMessages(){
         return messageService.findAllMessages();
     }
 
